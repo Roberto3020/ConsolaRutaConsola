@@ -12,20 +12,18 @@ namespace ConsolaRutaConsola
         private int _n;
         private Nodos _origin { get; set; }
         private List<Route> _solution { get; set; }
-        public double Costo { get; set; }
 
         public string GetAllRoutes
         {
             get
             {
                 string result = "";
-
                 foreach (var item in _solution)
                 {
                     foreach (var nodos in item.Nodos)
                     {
 
-                        result += nodos.City  + Costo * item.TotalDistance  +",";
+                        result += nodos.City   +" , ";
                     }
                     result += " " + item.TotalDistance + "\n";
                 }
